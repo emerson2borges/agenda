@@ -114,10 +114,10 @@ public class Controller extends HttpServlet {
 	
 	protected void editarContato(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		contato .setIdcon(request.getParameter("idcon"));
-		contato .setNome(request.getParameter("nome"));
-		contato .setFone(request.getParameter("fone"));
-		contato .setEmail(request.getParameter("email"));
+		contato.setIdcon(request.getParameter("idcon"));
+		contato.setNome(request.getParameter("nome"));
+		contato.setFone(request.getParameter("fone"));
+		contato.setEmail(request.getParameter("email"));
 		
 		dao.alterarContato(contato);
 		
