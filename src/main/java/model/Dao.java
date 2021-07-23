@@ -36,7 +36,7 @@ public class Dao {
 	}
 	
 	/**
-	 * Método de inserção de contato
+	 * Método de inserção de um contato
 	 * @param contato
 	 */
 	public void inserirContato(JavaBeans contato) {
@@ -149,7 +149,9 @@ public class Dao {
 			con.close();			
 			
 		} catch (Exception e) {
+			
 			System.out.println(e);
+			
 		}
 	}
 	
@@ -168,7 +170,9 @@ public class Dao {
 			con.close();
 			
 		} catch (Exception e) {
+			
 			System.out.println(e);
+			
 		}
 
 	}

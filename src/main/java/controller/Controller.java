@@ -82,7 +82,7 @@ public class Controller extends HttpServlet {
 		
 		dao.inserirContato(contato);
 		
-		response.sendRedirect("agenda.jsp");
+		response.sendRedirect("main");
 		
 	}
 	
