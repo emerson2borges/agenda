@@ -2,7 +2,7 @@ package model;
 
 public class JavaBeans {
 	
-	private String icon;
+	private String idcon;
 	private String nome;
 	private String fone;
 	private String email;
@@ -11,19 +11,19 @@ public class JavaBeans {
 		super();
 	}
 	
-	public JavaBeans(String icon, String nome, String fone, String email) {
+	public JavaBeans(String idcon, String nome, String fone, String email) {
 		super();
-		this.icon = icon;
+		this.idcon = idcon;
 		this.nome = nome;
 		this.fone = fone;
 		this.email = email;
 	}
 
-	public String getIcon() {
-		return icon;
+	public String getIdcon() {
+		return idcon;
 	}
-	public void setIcon(String icon) {
-		this.icon = icon;
+	public void setIdcon(String idcon) {
+		this.idcon = idcon;
 	}
 	public String getNome() {
 		return nome;
