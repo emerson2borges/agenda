@@ -1,7 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <%@ page import="model.JavaBeans" %>
 <%@ page import="java.util.ArrayList" %>
-<%  ArrayList<JavaBeans> lista = (ArrayList<JavaBeans>) request.getAttribute("contatos"); %>
+<% 
+	@ SuppressWarnings ("unchecked")
+	ArrayList<JavaBeans> lista = (ArrayList<JavaBeans>) request.getAttribute("contatos"); %>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>

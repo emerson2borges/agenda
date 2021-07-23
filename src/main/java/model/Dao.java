@@ -6,16 +6,28 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class Dao.
+ */
 public class Dao {
 
+	/** The driver. */
 	private String driver = "com.mysql.cj.jdbc.Driver";
+	
+	/** The url. */
 	private String url = "jdbc:mysql://127.0.0.1:3306/dbagenda";
+	
+	/** The user. */
 	private String user = "root";
+	
+	/** The password. */
 	private String password = "root";
 
 	/**
-	 * Método de conexão
-	 * @return
+	 * Método de conexão.
+	 *
+	 * @return the connection
 	 */
 	private Connection conectar() {
 
@@ -36,8 +48,9 @@ public class Dao {
 	}
 	
 	/**
-	 * Método de inserção de um contato
-	 * @param contato
+	 * Método de inserção de um contato.
+	 *
+	 * @param contato the contato
 	 */
 	public void inserirContato(JavaBeans contato) {
 		
@@ -64,6 +77,11 @@ public class Dao {
 		}
 	}
 	
+	/**
+	 * Listar contatos.
+	 *
+	 * @return the array list
+	 */
 	public ArrayList<JavaBeans> listarContatos() {
 		
 		ArrayList<JavaBeans> contatos = new ArrayList<>();
@@ -100,6 +118,11 @@ public class Dao {
 		}
 	}
 	
+	/**
+	 * Selecionar contato.
+	 *
+	 * @param contato the contato
+	 */
 	public void selecionarContato(JavaBeans contato) {
 		
 		String read2 = "SELECT * FROM contatos WHERE idcon=?";
@@ -129,15 +152,20 @@ public class Dao {
 		}
 	}
 	
+	/**
+	 * Alterar contato.
+	 *
+	 * @param contato the contato
+	 */
 	public void alterarContato(JavaBeans contato) {
 		
-		String create = "update contatos set nome=?, fone=?, email=? where idcon=?";
+		String update = "update contatos set nome=?, fone=?, email=? where idcon=?";
 		
 		try {
 			
 			Connection con = conectar();
 			
-			PreparedStatement pst = con.prepareStatement(create);
+			PreparedStatement pst = con.prepareStatement(update);
 			
 			pst.setString(1, contato.getNome());
 			pst.setString(2, contato.getFone());
@@ -155,6 +183,11 @@ public class Dao {
 		}
 	}
 	
+	/**
+	 * Deletar contato.
+	 *
+	 * @param contato the contato
+	 */
 	public void deletarContato(JavaBeans contato) {
 		
 		String delete = "delete from contatos where idcon=?";
@@ -177,14 +210,5 @@ public class Dao {
 
 	}
 
-//	public void testeConn() {
-//		try {
-//			Connection con = conectar();
-//			System.out.println(con);
-//			con.close();
-//		} catch (Exception e) {
-//			System.out.println(e);
-//		}
-//	}
-
 }
+

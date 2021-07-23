@@ -1,5 +1,6 @@
 /**
- * 
+ * Confirmar a exclusao de um contato
+ * param idcon
  */
 
 function confirmar(idcon) {

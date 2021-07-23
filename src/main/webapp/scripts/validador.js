@@ -1,5 +1,5 @@
 /**
- * 
+ * Validar campos obrigatorios
  */
 
 function validar() {
